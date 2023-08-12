@@ -1,0 +1,47 @@
+{
+    "_id": "fa44c0c3-e449-4398-9854-da746df8c333",
+    "colName": "Auth",
+    "created": "2023-08-08T10:25:33.238Z",
+    "sortNum": 20000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "015aec93-45b1-43da-94ba-a1c14abcb5b0",
+            "colId": "fa44c0c3-e449-4398-9854-da746df8c333",
+            "containerId": "",
+            "name": "Sign In",
+            "url": "{{host}}/v1/auth/sign-in",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-08T10:25:33.242Z",
+            "modified": "2023-08-12T14:59:00.089Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"pinero.marcos\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2128367-89ac-4226-aec6-95495c09dce7",
+            "colId": "fa44c0c3-e449-4398-9854-da746df8c333",
+            "containerId": "",
+            "name": "Sign Up",
+            "url": "{{host}}/v1/auth/sign-up",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-11T22:39:51.163Z",
+            "modified": "2023-08-12T14:58:36.866Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"pinero.marcos\",\n  \"password\": \"123456\",\n  \"id\": \"d8155fab-9d15-4267-90be-7273a219ac18\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

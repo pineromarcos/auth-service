@@ -1,6 +1,6 @@
-db = db.getSiblingDB('example-db');
+db = db.getSiblingDB('auth-db');
 db.createUser({
   user: 'dev',
   pwd: 'dev',
-  roles: [{ role: 'readWrite', db: 'example-db' }],
+  roles: [{ role: 'readWrite', db: 'auth-db' }],
 });

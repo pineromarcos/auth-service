@@ -60,4 +60,12 @@ export class Config {
     return Buffer.from(base64key, 'base64').toString('utf-8');
   }
 
+  public getTokenAlgorithm (): string {
+    return process.env.TOKEN_ALGORITHM as string;
+  }
+
+  public getTokenExpiration (): number {
+    return parseInt(process.env.TOKEN_EXPIRATION as string);
+  }
+
 }
