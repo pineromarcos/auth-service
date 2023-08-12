@@ -1,0 +1,8 @@
+node_modules
+dist/
+.DS_Store
+.env
+Thumbs.db
+!.vscode
+thunder-tests/thunderActivity.json
+tsconfig.tsbuildinfo

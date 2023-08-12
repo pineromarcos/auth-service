@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    image: node:${NODE_VERSION}
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ..:/app
+    working_dir: /app
+    # command: npm install && npm run serve
+    command: 'sh -c "tail -f /dev/null"'
+    ports:
+      - "${NODE_DEBUG_PORT}:9229"
+      - "${NODE_PUBLIC_PORT}:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:${MONGO_VERSION}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: dev
+      MONGO_INITDB_ROOT_PASSWORD: dev
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    ports:
+      - "${MONGO_PUBLIC_PORT}:27017"

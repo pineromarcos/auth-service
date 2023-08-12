@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "sourceMap": false,
+    "strict": true,
+    "target": "ES2022",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types/"
+    ],
+    "paths": {
+      "@core/*": [
+        "core/*"
+      ],
+      "@status/*": [
+        "status/*"
+      ],
+      "@src/*": [
+        "*"
+      ]
+    }
+  }
+}
